@@ -152,3 +152,7 @@ C:\Users\admin\RiderProjects\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\runtimes
 C:\Users\admin\RiderProjects\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\admin\RiderProjects\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\admin\RiderProjects\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_.BE6B8875.Up2Date
+C:\Users\admin\RiderProjects\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.sourcelink.json
+C:\Users\admin\RiderProjects\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\Azure.Core.Amqp.dll
+C:\Users\admin\RiderProjects\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\Azure.Messaging.ServiceBus.dll
+C:\Users\admin\RiderProjects\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\Microsoft.Azure.Amqp.dll

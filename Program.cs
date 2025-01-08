@@ -1,34 +1,25 @@
-﻿using Example.Domain.Repositories;
-using Example.Domain.Workflows;
-using Example.Infrastructure.Messaging;
-using Example.Infrastructure.Persistence;
+﻿using Example.Domain.Workflows;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to DI
-builder.Services.AddScoped<PlaceOrderWorkflow>();
-builder.Services.AddScoped<GenerateInvoiceWorkflow>();
-builder.Services.AddScoped<CreateShipmentWorkflow>();
-
-builder.Services.AddSingleton<IOrderRepository, OrderRepository>();
-builder.Services.AddSingleton<IInvoiceRepository, InvoiceRepository>();
-builder.Services.AddSingleton<IShipmentRepository, ShipmentRepository>();
-
-builder.Services.AddSingleton<IEventSender>(_ =>
-    new AzureServiceBusEventSender(
-        builder.Configuration["ServiceBus:ConnectionString"],
-        builder.Configuration["ServiceBus:TopicName"]
-    ));
-
-
-// Add controllers
+// Add services to the container.
 builder.Services.AddControllers();
+
+// Register workflows or any other dependencies.
+builder.Services.AddTransient<PlaceOrderWorkflow>();
+
+
+builder.Logging.AddConsole(); // Ensures logs are written to the console
 
 var app = builder.Build();
 
-// Map controllers
+// Map test endpoint.
+app.MapGet("/", () => "API is working!");
+
+// Map controllers.
 app.MapControllers();
 
 app.Run();

@@ -28,5 +28,10 @@
       <Folder Include="Example.Domain\Workflows\" />
       <Folder Include="Example.Infrastructure\" />
     </ItemGroup>
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
 </Project>
